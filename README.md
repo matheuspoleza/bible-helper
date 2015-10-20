@@ -1,2 +1,2 @@
 # Bible Helper
-Project to help with bible verses searching by theme
+App to search any theme, situation and recieve bible verses
