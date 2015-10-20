@@ -1,0 +1,20 @@
+language: python
+
+python:
+  - 2.7
+
+env:
+  - DJANGO=1.8.4
+
+before_install:
+  - export DJANGO_SETTINGS_MODULE=bible_helper.settings
+  - export PYTHONPATH=$HOME/builds/matheuspoleza/bible_helper
+  - export PIP_USE_MIRRORS=true
+
+install:
+  - pip install -r requirements.txt
+  - pip install django==$DJANGO --quiet
+
+script:
+  - python manage.py makemigrations
+  - python manage.py migrate
