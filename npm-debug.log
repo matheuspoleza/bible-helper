@@ -1,0 +1,38 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/bin/npm', 'run-script', 'get_bible_verses' ]
+2 info using npm@2.13.4
+3 info using node@v0.12.7
+4 verbose node symlink /usr/bin/node
+5 verbose run-script [ 'preget_bible_verses',
+5 verbose run-script   'get_bible_verses',
+5 verbose run-script   'postget_bible_verses' ]
+6 info preget_bible_verses bible_helper@1.0.0
+7 info get_bible_verses bible_helper@1.0.0
+8 verbose unsafe-perm in lifecycle true
+9 info bible_helper@1.0.0 Failed to exec get_bible_verses script
+10 verbose stack Error: bible_helper@1.0.0 get_bible_verses: `python scripts/get_bible_verses.py`
+10 verbose stack Exit status 1
+10 verbose stack     at EventEmitter.<anonymous> (/usr/lib/node_modules/npm/lib/utils/lifecycle.js:214:16)
+10 verbose stack     at EventEmitter.emit (events.js:110:17)
+10 verbose stack     at ChildProcess.<anonymous> (/usr/lib/node_modules/npm/lib/utils/spawn.js:24:14)
+10 verbose stack     at ChildProcess.emit (events.js:110:17)
+10 verbose stack     at maybeClose (child_process.js:1015:16)
+10 verbose stack     at Process.ChildProcess._handle.onexit (child_process.js:1087:5)
+11 verbose pkgid bible_helper@1.0.0
+12 verbose cwd /home/matheuspoleza/Code/seer-api-env/bible_helper
+13 error Linux 3.19.0-22-generic
+14 error argv "node" "/usr/bin/npm" "run-script" "get_bible_verses"
+15 error node v0.12.7
+16 error npm  v2.13.4
+17 error code ELIFECYCLE
+18 error bible_helper@1.0.0 get_bible_verses: `python scripts/get_bible_verses.py`
+18 error Exit status 1
+19 error Failed at the bible_helper@1.0.0 get_bible_verses script 'python scripts/get_bible_verses.py'.
+19 error This is most likely a problem with the bible_helper package,
+19 error not with npm itself.
+19 error Tell the author that this fails on your system:
+19 error     python scripts/get_bible_verses.py
+19 error You can get their info via:
+19 error     npm owner ls bible_helper
+19 error There is likely additional logging output above.
+20 verbose exit [ 1, true ]

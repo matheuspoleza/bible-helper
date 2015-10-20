@@ -1,0 +1,16 @@
+{
+  "name": "bible_helper",
+  "version": "1.0.0",
+  "description": "App to search any theme, situation and recieve bible verses",
+  "scripts": {
+  	"test":"python manage.py test",
+  	"makemigrations": "python manage.py makemigrations",
+  	"migrate": "python manage.py migrate",
+  	"syncdb": "python manage.py syncdb",
+  	"runserver": "python manage.py runserver",
+  	"get_bible_verses" : "python scripts/get_bible_verses.py",
+    "create_bible_books": "python scripts/create_bible_books.py"
+  },
+  "author": "Matheus Poleza",
+  "license": "MIT"
+}
