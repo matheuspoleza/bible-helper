@@ -1,16 +1,30 @@
 {
-  "name": "bible_helper",
-  "version": "1.0.0",
-  "description": "App to search any theme, situation and recieve bible verses",
+  "name": "bible-portuguese",
+  "version": "0.1.0",
+  "description": "Portuguese Bible module",
+  "main": "index.js",
   "scripts": {
-  	"test":"python manage.py test",
-  	"makemigrations": "python manage.py makemigrations",
-  	"migrate": "python manage.py migrate",
-  	"syncdb": "python manage.py syncdb",
-  	"runserver": "python manage.py runserver",
-  	"get_bible_verses" : "python scripts/get_bible_verses.py",
-    "create_bible_books": "python scripts/create_bible_books.py"
+    "test": "node test/index.js"
   },
-  "author": "Matheus Poleza",
-  "license": "MIT"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BibleJS/bible-portuguese.git"
+  },
+  "keywords": [
+    "bible",
+    "portuguese",
+    "node"
+  ],
+  "dependencies": {
+    "request": "^2.65.0"
+  },
+  "author": "Raphael Amorim",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BibleJS/bible-portuguese/issues"
+  },
+  "homepage": "https://github.com/BibleJS/bible-portuguese#readme",
+  "devDependencies": {
+    "prova": "^2.1.2"
+  }
 }
