@@ -1,39 +1,16 @@
-// Dependencies
-var Request = require("request");
+var express = require('express');
+var PtBible = require("bible-portuguese");
+var app = express();
 
-// Constants
-const PROVIDER = 'http://bible-api.com/',
-    TRANSLATION = '?translation=almeida';
+app.get('/api', function(req,res) {
+  res.send('Welcome to bible_helper api');
+});
 
-// Constructor
-var BiblePortuguese = module.exports = {};
+app.get('/api/:theme', function(req, res) {
+  var theme = req.params.theme;
+  res.json({ name: theme, verses:{}});
+});
 
-/**
- * getVerse
- * Gets the reference using labs.bible.org provider.
- *
- * @name getVerse
- * @function
- * @param {String} reference Bible verse reference
- * @param {Function} callback The callback function
- * @return
- */
-BiblePortuguese.getVerse = function (reference, callback) {
+app.use('/', express.static(__dirname + '/static'));
 
-    if (typeof reference === "object") {
-        reference = this.reference;
-    }
-
-    Request.get({
-        json: true
-      , url: PROVIDER + reference + TRANSLATION
-    }, function (err, response, body) {
-
-        if (err || response.statusCode !== 200) {
-            return callback (err || response.message);
-        }
-
-        // TODO check response
-        callback (null, body);
-    });
-};
+app.listen(3000);
